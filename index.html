@@ -353,10 +353,31 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:499;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;text-decoration:none;box-shadow:0 8px 25px rgba(37,211,102,.4);animation:wap 2.5s infinite;}
 @keyframes wap{0%,100%{box-shadow:0 8px 25px rgba(37,211,102,.4)}50%{box-shadow:0 8px 40px rgba(37,211,102,.7)}}
 
+/* SEARCH + SORT BAR */
+.search-sort-bar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;max-width:1300px;margin:0 auto 32px;}
+.search-box{position:relative;flex:1;min-width:220px;max-width:420px;}
+.search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--rose);font-size:14px;}
+.search-box input{width:100%;background:var(--surface);border:1px solid var(--border);padding:13px 16px 13px 42px;color:var(--cream);font-size:13px;font-family:'Raleway',sans-serif;outline:none;transition:.3s;}
+.search-box input:focus{border-color:var(--rose);}
+.search-box input::placeholder{color:var(--muted);}
+.sort-box select{background:var(--surface);border:1px solid var(--border);color:var(--cream);padding:13px 16px;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-family:'Raleway',sans-serif;outline:none;cursor:pointer;color-scheme:dark;transition:.3s;}
+.sort-box select:focus{border-color:var(--rose);}
+.no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted);}
+.no-results i{font-size:40px;margin-bottom:14px;color:var(--border);display:block;}
+
+/* DELIVERY / BULK DISCOUNT UI */
+.delivery-note-box{background:rgba(26,92,69,.12);border:1px solid rgba(201,149,110,.2);padding:14px 16px;font-size:12px;color:var(--muted);margin-top:10px;line-height:1.7;}
+.delivery-note-box strong{color:var(--rose-lt);}
+.order-sum-line{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);padding:5px 0;}
+.order-sum-line.discount{color:#4fae7a;}
+.order-sum-line.free{color:#4fae7a;font-weight:700;}
+.min-order-warning{background:rgba(200,80,60,.12);border:1px solid rgba(200,80,60,.35);color:#e08a75;font-size:12px;padding:12px 16px;margin-top:10px;display:none;}
+.min-order-warning.show{display:block;}
+
 /* RESPONSIVE */
 @media(max-width:1200px){.products-grid{grid-template-columns:repeat(3,1fr);}.why-grid{grid-template-columns:repeat(2,1fr);}.foot-grid{grid-template-columns:1fr 1fr;gap:40px;}.featured-band-inner{grid-template-columns:1fr;gap:50px;}.fb-img-wrap img{height:380px;}}
 @media(max-width:900px){.nav-links,.wa-nav{display:none;}.hamburger{display:flex;}.hero-content{grid-template-columns:1fr;gap:40px;padding:0 20px;}.hero-showcase{display:none;}.hero h1{font-size:46px;}.products-grid{grid-template-columns:repeat(2,1fr);}.stats-strip{gap:40px;}.contact-grid{grid-template-columns:1fr;}.returns-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.rev-grid{grid-template-columns:1fr 1fr;}.modal-box{grid-template-columns:1fr;}.modal-img{min-height:250px;}.payment-methods{grid-template-columns:repeat(2,1fr);}.about-inner{grid-template-columns:1fr !important;gap:30px !important;}.checkout-body{padding:24px 22px;}.checkout-header{padding:22px 22px;}.foot-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){.nav-wrap{padding:14px 16px;}.logo-name{font-size:18px;}.hero{min-height:80vh;}.hero h1{font-size:30px;line-height:1.15;}.hero-sub{font-size:16px;margin-bottom:28px;}.hero-btns{flex-direction:column;gap:12px;}.btn-primary,.btn-outline{text-align:center;width:100%;padding:14px 20px;}.hero-badges{gap:16px;margin-top:32px;}.stats-strip{gap:18px;padding:20px 16px;justify-content:space-around;}.stat-num{font-size:26px;}.section{padding:60px 4%;}.sec-head{margin-bottom:36px;}.sec-head h2{font-size:28px;}.products-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.pc-img{height:180px;}.pc-name{font-size:13px;}.pc-price-main{font-size:15px;}.pc-body{padding:12px 10px;}.why-grid{grid-template-columns:1fr 1fr;}.why-card{padding:28px 18px;}.rev-grid{grid-template-columns:1fr;}.featured-band{padding:50px 4%;}.fb-text h2{font-size:26px;}.contact-form-wrap{padding:28px 20px;}.foot-grid{grid-template-columns:1fr;gap:28px;}.cart-sidebar{width:100%;max-width:100%;}.checkout-body{padding:16px;}.checkout-header{padding:18px 16px;}.payment-methods{grid-template-columns:repeat(2,1fr);}.modal-box{grid-template-columns:1fr;margin:6px;}.modal-img{min-height:220px;}.modal-info{padding:20px 16px;gap:10px;}.modal-actions{flex-direction:column;}.receipt-body{padding:16px 18px;}.receipt-actions{flex-direction:column;padding:12px 18px 18px;}.receipt-box{max-width:100%;}}
+@media(max-width:600px){.nav-wrap{padding:14px 16px;}.logo-name{font-size:18px;}.hero{min-height:80vh;}.hero h1{font-size:30px;line-height:1.15;}.hero-sub{font-size:16px;margin-bottom:28px;}.hero-btns{flex-direction:column;gap:12px;}.btn-primary,.btn-outline{text-align:center;width:100%;padding:14px 20px;}.hero-badges{gap:16px;margin-top:32px;}.stats-strip{gap:18px;padding:20px 16px;justify-content:space-around;}.stat-num{font-size:26px;}.section{padding:60px 4%;}.sec-head{margin-bottom:36px;}.sec-head h2{font-size:28px;}.products-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.pc-img{height:180px;}.pc-name{font-size:13px;}.pc-price-main{font-size:15px;}.pc-body{padding:12px 10px;}.why-grid{grid-template-columns:1fr 1fr;}.why-card{padding:28px 18px;}.rev-grid{grid-template-columns:1fr;}.featured-band{padding:50px 4%;}.fb-text h2{font-size:26px;}.contact-form-wrap{padding:28px 20px;}.foot-grid{grid-template-columns:1fr;gap:28px;}.cart-sidebar{width:100%;max-width:100%;}.checkout-body{padding:16px;}.checkout-header{padding:18px 16px;}.payment-methods{grid-template-columns:repeat(2,1fr);}.modal-box{grid-template-columns:1fr;margin:6px;}.modal-img{min-height:220px;}.modal-info{padding:20px 16px;gap:10px;}.modal-actions{flex-direction:column;}.receipt-body{padding:16px 18px;}.receipt-actions{flex-direction:column;padding:12px 18px 18px;}.receipt-box{max-width:100%;}.search-sort-bar{flex-direction:column;align-items:stretch;}.search-box{max-width:100%;}}
 </style>
 </head>
 <body>
@@ -579,6 +600,17 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
   <section class="section" style="background:var(--bg);padding-top:130px;">
     <div class="sec-inner">
       <div class="sec-head"><span class="sec-eyebrow">Bangle Collection</span><h2>Elegant Bangles</h2><p>For every occasion — weddings, celebrations, or everyday elegance</p></div>
+      <div class="search-sort-bar">
+        <div class="search-box"><i class="fas fa-search"></i><input type="text" id="bangles-search" placeholder="Search bangles by name..." oninput="filterAndRender('bangle')"></div>
+        <div class="sort-box">
+          <select id="bangles-sort" onchange="filterAndRender('bangle')">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+          </select>
+        </div>
+      </div>
       <div class="products-grid" id="banglesGrid"></div>
     </div>
   </section>
@@ -607,6 +639,17 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
   <section class="section" style="background:var(--bg);padding-top:130px;">
     <div class="sec-inner">
       <div class="sec-head"><span class="sec-eyebrow">Bracelet Collection</span><h2>Elegant Bracelets</h2><p>Delicate chains and charm bracelets for the modern woman</p></div>
+      <div class="search-sort-bar">
+        <div class="search-box"><i class="fas fa-search"></i><input type="text" id="bracelets-search" placeholder="Search bracelets by name..." oninput="filterAndRender('bracelet')"></div>
+        <div class="sort-box">
+          <select id="bracelets-sort" onchange="filterAndRender('bracelet')">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+          </select>
+        </div>
+      </div>
       <div class="products-grid" id="braceletsGrid"></div>
     </div>
   </section>
@@ -927,6 +970,7 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
         <div class="checkout-section-title"><i class="fas fa-map-marker-alt"></i> Shipping Information</div>
         <div class="form-group"><label>Full Name</label><input type="text" id="sh-name" placeholder="Your Full Name"></div>
         <div class="form-group"><label>WhatsApp Number</label><input type="tel" id="sh-phone" placeholder="+92 xxx xxx xxxx"></div>
+        <div class="form-group"><label>City</label><select id="sh-city" onchange="updateOrderSummary()"><option value="" disabled selected>Select your city</option><option value="Rawalpindi">Rawalpindi</option><option value="Islamabad">Islamabad</option><option value="Lahore">Lahore</option><option value="Karachi">Karachi</option><option value="Faisalabad">Faisalabad</option><option value="Multan">Multan</option><option value="Peshawar">Peshawar</option><option value="Other">Other City</option></select></div>
         <div class="form-group"><label>Complete Delivery Address</label><input type="text" id="sh-address" placeholder="House No, Street, Area, City"></div>
         <div class="form-group"><label>Special Instructions (Optional)</label><input type="text" id="sh-notes" placeholder="e.g. Gift wrapping, specific colour note..."></div>
       </div>
@@ -943,8 +987,12 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
         <div class="checkout-section-title"><i class="fas fa-receipt"></i> Order Summary</div>
         <div class="order-summary-box">
           <ul id="order-items-list"></ul>
+          <div class="order-sum-line"><span>Subtotal</span><span id="sum-subtotal">Rs. 0</span></div>
+          <div class="order-sum-line discount" id="sum-bulk-row" style="display:none;"><span id="sum-bulk-label">Bulk Discount</span><span id="sum-bulk-amt">- Rs. 0</span></div>
+          <div class="order-sum-line" id="sum-delivery-row"><span>Delivery Charges</span><span id="sum-delivery-amt">Rs. 0</span></div>
           <div class="order-total"><span>Total</span><span id="checkout-total">Rs. 0</span></div>
-          <p style="font-size:11px;color:var(--muted);margin-top:8px;"><i class="fas fa-info-circle"></i> Delivery charges confirmed on WhatsApp after order.</p>
+          <div class="delivery-note-box" id="delivery-note-box"><strong>📦 Delivery:</strong> Select your city above to see estimated delivery charges. Free delivery on orders over Rs. 3,000. <strong>🎁 Bulk Discount:</strong> Order 5+ pieces and get 10% off automatically.</div>
+          <div class="min-order-warning" id="min-order-warning">⚠️ Minimum order amount is Rs. 500. Please add more items to proceed.</div>
         </div>
       </div>
       <button class="btn-complete" onclick="completeOrder()"><i class="fab fa-whatsapp"></i> Confirm Order via WhatsApp</button>
@@ -972,19 +1020,23 @@ tbody td{padding:14px 20px;font-size:14px;color:var(--text);}
       <hr class="receipt-divider">
       <div class="receipt-row"><span class="label">Customer</span><span class="val" id="r-name">—</span></div>
       <div class="receipt-row"><span class="label">WhatsApp</span><span class="val" id="r-phone">—</span></div>
+      <div class="receipt-row"><span class="label">City</span><span class="val" id="r-city">—</span></div>
       <div class="receipt-row"><span class="label">Address</span><span class="val" id="r-address">—</span></div>
       <div class="receipt-row"><span class="label">Payment</span><span class="val" id="r-payment">—</span></div>
       <div class="receipt-row" id="r-notes-row" style="display:none;"><span class="label">Note</span><span class="val" id="r-notes">—</span></div>
       <hr class="receipt-divider">
       <div class="receipt-items-title">📦 Items Ordered</div>
       <div id="r-items-list"></div>
+      <div class="receipt-row"><span class="label">Subtotal</span><span class="val" id="r-subtotal">Rs. 0</span></div>
+      <div class="receipt-row" id="r-bulk-row" style="display:none;"><span class="label">Bulk Discount</span><span class="val" id="r-bulk">- Rs. 0</span></div>
+      <div class="receipt-row"><span class="label">Delivery</span><span class="val" id="r-delivery">Rs. 0</span></div>
       <div class="receipt-total-box">
         <span class="total-label">Total Amount</span>
         <span class="total-amt" id="r-total">Rs. 0</span>
       </div>
     </div>
     <div class="receipt-note">
-      ⚠️ Delivery charges will be confirmed separately via WhatsApp.<br>
+      ⚠️ Delivery charges shown are estimates and will be finally confirmed via WhatsApp.<br>
       Our team will contact you within 1–2 hours to confirm your order.<br>
       📞 <strong>+92 323 506 3462</strong> &nbsp;|&nbsp; Pirwadhai, Rawalpindi
     </div>
@@ -1042,6 +1094,33 @@ function renderCard(p) {
   </div>`;
 }
 
+function renderGrid(gridId, list) {
+  const el = document.getElementById(gridId);
+  if (!list.length) {
+    el.innerHTML = `<div class="no-results"><i class="fas fa-search"></i>No products found. Try a different search term.</div>`;
+    return;
+  }
+  el.innerHTML = list.map(renderCard).join('');
+}
+
+function filterAndRender(type) {
+  const searchId = type === 'bangle' ? 'bangles-search' : 'bracelets-search';
+  const sortId   = type === 'bangle' ? 'bangles-sort'   : 'bracelets-sort';
+  const gridId   = type === 'bangle' ? 'banglesGrid'    : 'braceletsGrid';
+  const searchVal = (document.getElementById(searchId).value || '').trim().toLowerCase();
+  const sortVal   = document.getElementById(sortId).value;
+
+  let list = PRODUCTS.filter(p => p.type === type);
+  if (searchVal) {
+    list = list.filter(p => p.name.toLowerCase().includes(searchVal) || p.cat.toLowerCase().includes(searchVal));
+  }
+  if (sortVal === 'price-asc')      list = [...list].sort((a,b) => a.price - b.price);
+  else if (sortVal === 'price-desc') list = [...list].sort((a,b) => b.price - a.price);
+  else if (sortVal === 'name-asc')   list = [...list].sort((a,b) => a.name.localeCompare(b.name));
+
+  renderGrid(gridId, list);
+}
+
 document.getElementById('featuredGrid').innerHTML  = PRODUCTS.slice(0,4).map(renderCard).join('');
 document.getElementById('banglesGrid').innerHTML   = PRODUCTS.filter(p=>p.type==='bangle').map(renderCard).join('');
 document.getElementById('braceletsGrid').innerHTML = PRODUCTS.filter(p=>p.type==='bracelet').map(renderCard).join('');
@@ -1053,7 +1132,35 @@ let currentModalSize = '2.4';
 let currentModalColour = 'Golden';
 let currentModalQty  = 1;
 
+/* ══ DELIVERY & BULK DISCOUNT CONFIG ══ */
+const DELIVERY_RATES = {
+  'Rawalpindi': 0,
+  'Islamabad': 0,
+  'Lahore': 250,
+  'Karachi': 300,
+  'Faisalabad': 250,
+  'Multan': 250,
+  'Peshawar': 250,
+  'Other': 300
+};
+const FREE_DELIVERY_THRESHOLD = 3000;
+const BULK_QTY_THRESHOLD = 5;
+const BULK_DISCOUNT_PERCENT = 10;
+const MIN_ORDER_AMOUNT = 500;
+
 function getCartTotal() { return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+function getCartQty() { return cart.reduce((s,i)=>s+i.qty,0); }
+
+function getDeliveryCharge(subtotal, city) {
+  if (subtotal >= FREE_DELIVERY_THRESHOLD) return 0;
+  if (!city) return null;
+  return DELIVERY_RATES.hasOwnProperty(city) ? DELIVERY_RATES[city] : DELIVERY_RATES['Other'];
+}
+
+function getBulkDiscount(subtotal, qty) {
+  if (qty >= BULK_QTY_THRESHOLD) return Math.round(subtotal * BULK_DISCOUNT_PERCENT / 100);
+  return 0;
+}
 
 function updateCartUI() {
   const total = cart.reduce((s,i)=>s+i.qty,0);
@@ -1117,39 +1224,111 @@ function openCheckout(){
   document.getElementById('cartSidebar').classList.remove('open');
   const list=document.getElementById('order-items-list');
   list.innerHTML=cart.map(i=>`<li><span>${i.name} (${i.size}, ${i.colour}) ×${i.qty}</span><span>Rs. ${(i.price*i.qty).toLocaleString()}</span></li>`).join('')||'<li><span>No items</span><span>—</span></li>';
-  document.getElementById('checkout-total').textContent='Rs. '+getCartTotal().toLocaleString();
   document.getElementById('checkoutOverlay').classList.add('open');
+  updateOrderSummary();
 }
 function closeCheckout(){ document.getElementById('checkoutOverlay').classList.remove('open'); }
 function selectPay(el,method){ document.querySelectorAll('.pay-method').forEach(e=>e.classList.remove('selected')); el.classList.add('selected'); currentPayMethod=method; }
 
+function updateOrderSummary(){
+  const subtotal = getCartTotal();
+  const qty = getCartQty();
+  const city = document.getElementById('sh-city') ? document.getElementById('sh-city').value : '';
+  const bulkDiscount = getBulkDiscount(subtotal, qty);
+  const discountedSubtotal = subtotal - bulkDiscount;
+  const delivery = getDeliveryCharge(discountedSubtotal, city);
+  const deliveryDisplay = delivery === null ? null : delivery;
+  const total = discountedSubtotal + (deliveryDisplay || 0);
+
+  document.getElementById('sum-subtotal').textContent = 'Rs. ' + subtotal.toLocaleString();
+
+  const bulkRow = document.getElementById('sum-bulk-row');
+  if (bulkDiscount > 0) {
+    bulkRow.style.display = 'flex';
+    document.getElementById('sum-bulk-label').textContent = `Bulk Discount (${BULK_DISCOUNT_PERCENT}% off, ${qty} pcs)`;
+    document.getElementById('sum-bulk-amt').textContent = '- Rs. ' + bulkDiscount.toLocaleString();
+  } else {
+    bulkRow.style.display = 'none';
+  }
+
+  const deliveryAmtEl = document.getElementById('sum-delivery-amt');
+  if (discountedSubtotal >= FREE_DELIVERY_THRESHOLD) {
+    deliveryAmtEl.textContent = 'FREE';
+    deliveryAmtEl.parentElement.classList.add('free');
+  } else {
+    deliveryAmtEl.parentElement.classList.remove('free');
+    deliveryAmtEl.textContent = city ? 'Rs. ' + (deliveryDisplay||0).toLocaleString() : 'Select city →';
+  }
+
+  document.getElementById('checkout-total').textContent = 'Rs. ' + total.toLocaleString();
+
+  const warnEl = document.getElementById('min-order-warning');
+  if (subtotal > 0 && subtotal < MIN_ORDER_AMOUNT) {
+    warnEl.classList.add('show');
+  } else {
+    warnEl.classList.remove('show');
+  }
+}
+
+function saveOrderToLocalStorage(orderRecord){
+  try {
+    const existing = JSON.parse(localStorage.getItem('ab_orders') || '[]');
+    existing.push(orderRecord);
+    localStorage.setItem('ab_orders', JSON.stringify(existing));
+  } catch(e) {
+    console.warn('Could not save order locally:', e);
+  }
+}
+
 function completeOrder(){
   const name    = document.getElementById('sh-name').value.trim();
   const phone   = document.getElementById('sh-phone').value.trim();
+  const city    = document.getElementById('sh-city').value;
   const address = document.getElementById('sh-address').value.trim();
   const notes   = document.getElementById('sh-notes').value.trim();
   if(!name||!phone||!address){ alert('Please fill in your Name, WhatsApp Number and Address.'); return; }
+  if(!city){ alert('Please select your city so we can calculate delivery charges.'); return; }
+  const subtotal = getCartTotal();
+  if(subtotal < MIN_ORDER_AMOUNT){ alert('Minimum order amount is Rs. '+MIN_ORDER_AMOUNT+'. Please add more items to proceed.'); return; }
+
+  const qty = getCartQty();
+  const bulkDiscount = getBulkDiscount(subtotal, qty);
+  const discountedSubtotal = subtotal - bulkDiscount;
+  const delivery = getDeliveryCharge(discountedSubtotal, city) || 0;
+  const grandTotal = discountedSubtotal + delivery;
+
   const orderId = '#AB-' + Date.now().toString().slice(-6);
   const now = new Date();
   const dateStr = now.toLocaleDateString('en-PK',{day:'2-digit',month:'short',year:'numeric'}) + ' — ' + now.toLocaleTimeString('en-PK',{hour:'2-digit',minute:'2-digit'});
   const itemsText = cart.map(i=>`• ${i.name} (Size: ${i.size}, Colour: ${i.colour}) × ${i.qty} = Rs.${(i.price*i.qty).toLocaleString()}`).join('\n');
-  const totalAmt  = 'Rs. ' + getCartTotal().toLocaleString();
+  const subtotalAmt = 'Rs. ' + subtotal.toLocaleString();
+  const bulkText = bulkDiscount>0 ? `🎁 Bulk Discount (${BULK_DISCOUNT_PERCENT}% off, ${qty} pcs): - Rs. ${bulkDiscount.toLocaleString()}\n` : '';
+  const deliveryText = delivery===0 ? 'FREE' : 'Rs. ' + delivery.toLocaleString();
+  const totalAmt  = 'Rs. ' + grandTotal.toLocaleString();
 
   const ownerMsg =
     `🔔 *NEW ORDER — Abdullah Bangles*\n\n` +
     `🆔 Order ID: *${orderId}*\n📅 Date: ${dateStr}\n\n` +
-    `👤 *Customer Details*\nName: ${name}\n📞 WhatsApp: ${phone}\n🏠 Address: ${address}\n` +
+    `👤 *Customer Details*\nName: ${name}\n📞 WhatsApp: ${phone}\n🏙️ City: ${city}\n🏠 Address: ${address}\n` +
     (notes ? `📝 Note: ${notes}\n` : '') +
-    `\n💳 Payment: *${currentPayMethod}*\n\n🛍️ *Order Items:*\n${itemsText}\n\n💰 *Total: ${totalAmt}*\n\n⚠️ Please confirm delivery charges with customer.`;
+    `\n💳 Payment: *${currentPayMethod}*\n\n🛍️ *Order Items:*\n${itemsText}\n\n` +
+    `Subtotal: ${subtotalAmt}\n${bulkText}🚚 Delivery: ${deliveryText}\n💰 *Total: ${totalAmt}*`;
 
   const customerMsg =
     `🎉 *Order Confirmed — Abdullah Bangles*\n\nShukriya ${name}! Aap ka order mil gaya hai. ❤️\n\n` +
     `🧾 *Aap ki Receipt / Bill*\n━━━━━━━━━━━━━━━━━━\n` +
     `🆔 Order ID: *${orderId}*\n📅 ${dateStr}\n━━━━━━━━━━━━━━━━━━\n` +
-    `👤 Name: ${name}\n📞 WhatsApp: ${phone}\n🏠 Address: ${address}\n💳 Payment: ${currentPayMethod}\n` +
+    `👤 Name: ${name}\n📞 WhatsApp: ${phone}\n🏙️ City: ${city}\n🏠 Address: ${address}\n💳 Payment: ${currentPayMethod}\n` +
     `━━━━━━━━━━━━━━━━━━\n📦 *Items:*\n${itemsText}\n━━━━━━━━━━━━━━━━━━\n` +
-    `💰 *Total: ${totalAmt}*\n(Delivery charges will be confirmed separately)\n\n` +
+    `Subtotal: ${subtotalAmt}\n${bulkText}🚚 Delivery: ${deliveryText}\n` +
+    `💰 *Total: ${totalAmt}*\n\n` +
     `Hamari team aap se 1-2 ghante mein rabta karegi. Shukriya! 🙏\n📞 Abdullah Bangles: +92 323 506 3462`;
+
+  saveOrderToLocalStorage({
+    orderId, date: now.toISOString(), name, phone, city, address, notes,
+    payment: currentPayMethod, items: cart.map(i=>({name:i.name,size:i.size,colour:i.colour,qty:i.qty,price:i.price})),
+    subtotal, bulkDiscount, delivery, total: grandTotal
+  });
 
   window.open('https://wa.me/923235063462?text='+encodeURIComponent(ownerMsg),'_blank');
   setTimeout(()=>{
@@ -1161,6 +1340,7 @@ function completeOrder(){
   document.getElementById('r-datetime').textContent = dateStr;
   document.getElementById('r-name').textContent     = name;
   document.getElementById('r-phone').textContent    = phone;
+  document.getElementById('r-city').textContent     = city;
   document.getElementById('r-address').textContent  = address;
   document.getElementById('r-payment').textContent  = currentPayMethod;
   if(notes){ document.getElementById('r-notes-row').style.display='flex'; document.getElementById('r-notes').textContent=notes; }
@@ -1169,6 +1349,14 @@ function completeOrder(){
       <span>${i.name} (${i.size}, ${i.colour}) × ${i.qty}${i.pieces?' ['+i.pieces+' pcs set]':''}</span>
       <span><strong>Rs. ${(i.price*i.qty).toLocaleString()}</strong></span>
     </div>`).join('');
+  document.getElementById('r-subtotal').textContent = subtotalAmt;
+  if (bulkDiscount > 0) {
+    document.getElementById('r-bulk-row').style.display='flex';
+    document.getElementById('r-bulk').textContent = '- Rs. ' + bulkDiscount.toLocaleString();
+  } else {
+    document.getElementById('r-bulk-row').style.display='none';
+  }
+  document.getElementById('r-delivery').textContent = deliveryText;
   document.getElementById('r-total').textContent = totalAmt;
   cart=[];
   updateCartUI();
@@ -1181,7 +1369,7 @@ function saveReceipt(){
   const win = window.open('','_blank','width=540,height=750');
   win.document.write(`<!DOCTYPE html><html><head>
     <meta charset="UTF-8"><title>Abdullah Bangles — Order Receipt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       *{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Raleway',sans-serif;background:#fff;color:#1a1a1a;}
       .receipt-header{background:#0f3828;color:#fff;padding:28px 32px;text-align:center;}
